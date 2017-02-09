@@ -1,0 +1,30 @@
+{
+  "name": "aircheckreport",
+  "version": "0.0.1",
+  "description": "Reporting section for AirCheck application built in Node.js",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/routerchowder/aircheck-report.git"
+  },
+  "author": "Router Chowder",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/routerchowder/aircheck-report#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "express": "^4.13.4",
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.8",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3"
+  }
+}
