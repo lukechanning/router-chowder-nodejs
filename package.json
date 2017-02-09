@@ -1,16 +1,16 @@
 {
-  "name": "aircheckreport",
+  "name": "advanced-cabling",
   "version": "0.0.1",
-  "description": "Reporting section for AirCheck application built in Node.js",
+  "description": "Timeline application built in Angular for Advanced Cabling",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/routerchowder/aircheck-report.git"
+    "url": "git+ssh://git@bitbucket.org:lukechanning/advanced-cabling-timeline.git"
   },
   "author": "Router Chowder",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/routerchowder/aircheck-report#readme",
+  "homepage": "https://bitbucket.org:lukechanning/advanced-cabling-timeline#readme",
   "dependencies": {
     "angular": "^1.5.5",
     "angular-ui-router": "^0.4.2",
