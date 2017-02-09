@@ -3,13 +3,15 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('gulp-autoprefixer'),
+  browserify = require('browserify'),
+  source = require('vinyl-source-stream'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   cleanCSS = require('gulp-clean-css');
     
 // set some neato variables for use down undah, mate
-var appInput = './app/js/**/*.js';
 var appOutput = './public/';
+var scriptInput = './app/js/**/*.js';
 var sassInput = './app/scss/**/*.scss';
 var sassOutput = './public/';
 var nodeModule = './node_modules/';
@@ -44,16 +46,13 @@ gulp.task('buildSass', function(){
     .pipe(gulp.dest(sassOutput));
 });
 
-// concat all our JS together
-gulp.task('scripts', function() {
-  return gulp.src([
-    nodeModule + 'jquery/dist/jquery.min.js', // get jQuery
-    nodeModule + 'bootstrap/dist/bootstrap.min.js', // load bootstrap.js
-    nodeModule + 'angular/angular.min.js', // load angular
-    appInput
-    ])
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest(appOutput));
+// define the browserify stuff
+gulp.task('browserify', function() {
+  // Grabs the app.js file
+  return browserify('./app/js/app.js')
+    .bundle() // bundle it
+    .pipe(source('app.js')) // put the bundle to vinyl
+    .pipe(gulp.dest('./public/')); // shove it in the app hole
 });
 
 // uglify the scripts for production
@@ -65,12 +64,12 @@ gulp.task('buildJS', function() {
 
 // define the watch task
 gulp.task('watch', function() {
-  gulp.watch(appInput, ['scripts']);
+  gulp.watch(scriptInput, ['browserify']);
   gulp.watch(sassInput, ['sass']);
 });
 
 // setup our default task
-gulp.task('default', ['sass', 'scripts', 'watch' /*, possible other tasks... */]);
+gulp.task('default', ['sass', 'browserify', 'watch' /*, possible other tasks... */]);
 
 // setup our deploy task
-gulp.task('build', ['sass', 'buildSass', 'scripts', 'buildJS' /* other deploy tasks */]);
+gulp.task('build', ['sass', 'buildSass', 'browserify', 'buildJS' /* other deploy tasks */]);
