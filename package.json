@@ -1,7 +1,7 @@
 {
-  "name": "advanced-cabling",
+  "name": "bitfoot-front-end",
   "version": "0.0.1",
-  "description": "Timeline application built in Angular for Advanced Cabling",
+  "description": "Front-end styling for the Bitfoot application",
   "main": "index.js",
   "scripts": {},
   "repository": {
@@ -10,12 +10,10 @@
   },
   "author": "Router Chowder",
   "license": "ISC",
-  "homepage": "https://bitbucket.org:lukechanning/advanced-cabling-timeline#readme",
+  "homepage": "",
   "dependencies": {
     "angular": "^1.5.5",
     "angular-ui-router": "^0.4.2",
-    "bootstrap": "^3.3.6",
-    "bootstrap-sass": "^3.3.6",
     "express": "^4.13.4",
     "jquery": "^2.2.4"
   },

@@ -22,7 +22,7 @@ gulp.task('sass', function () {
     .src('./app/scss/app.scss')
     .pipe(sass({
       includePaths: [
-        nodeModule + 'bootstrap-sass/assets/stylesheets/'
+        nodeModule + 'bootstrap/scss/'
       ]
     }))
     .pipe(sourcemaps.init())
