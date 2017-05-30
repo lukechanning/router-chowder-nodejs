@@ -13,5 +13,9 @@ primary stylesheet for Bitfoot - caught you looking at our code!
 @import 'variables';
 @import 'bootstrap';
 
+// load global styles
+@import 'global/buttons';
+
 // load components
+@import 'components/jumbotron';
 @import 'components/navbar';

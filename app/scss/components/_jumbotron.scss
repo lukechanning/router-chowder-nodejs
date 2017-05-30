@@ -1,0 +1,24 @@
+// stage jumbotron styling
+.jumbotron {
+    color: $white;
+    padding: 15vh 3rem;
+    background-image: -webkit-linear-gradient(-180deg, #2CDCAD 0%, #14B675 100%);
+    background-image: -moz-linear-gradient(-180deg, #2CDCAD 0%, #14B675 100%);
+    background-image: -o-linear-gradient(-180deg, #2CDCAD 0%, #14B675 100%);
+    background-image: linear-gradient(-180deg, #2CDCAD 0%, #14B675 100%);
+    
+    // text specific styling
+    h4 {
+        padding: $spacer 0;
+    }
+    i {
+        color: #005950;
+        padding-right: 5px;
+        font-weight: 700;
+    }
+    p {
+        color: $white;
+        padding: $spacer 0;    
+    }
+    
+}
