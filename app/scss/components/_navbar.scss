@@ -1,0 +1,15 @@
+// begin whole navbar styling
+.navbar {
+    // logo specific items
+    .navbar-brand {
+        img {
+            max-width: 150px;
+        }
+    }
+    @media (min-width: 992px) {
+        .nav-link {
+            font-size: $font-size-lg;
+            padding: ($spacer / 2) ($spacer * 2) !important;
+        }
+    }
+}
