@@ -1,8 +1,12 @@
 .btn {
+    cursor: pointer;
     // primary styling
     &.btn-primary,
     &.btn-secondary {
         text-transform: uppercase;
+        @include media-breakpoint-down(md) {
+            margin: 0.5rem 0;
+        }
     }
 }
 
