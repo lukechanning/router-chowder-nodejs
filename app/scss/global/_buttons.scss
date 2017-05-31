@@ -1,6 +1,26 @@
 .btn {
     // primary styling
-    &.btn-primary {
+    &.btn-primary,
+    &.btn-secondary {
         text-transform: uppercase;
+    }
+}
+
+// ticker button
+.button__two-tone {
+    padding: $spacer;
+    .button__two-tone-lead {
+        background-color: rgba(#000032, 0.35);
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 1rem 0 0 1rem;
+    }
+    .button__two-tone-text {
+        border-radius: 0 1rem 1rem 0;
+        background-color: rgba(#000032, 0.15);
+    }
+    .button__two-tone-lead,
+    .button__two-tone-text {
+        padding: ($spacer / 2) $spacer;
     }
 }
