@@ -22,4 +22,9 @@
     img {
         max-width: 100%;
     }
+    
+    // buttons 
+    &__buttons {
+        padding: $spacer 0;
+    }
 }

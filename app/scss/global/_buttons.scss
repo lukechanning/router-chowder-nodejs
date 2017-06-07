@@ -3,7 +3,9 @@
     // primary styling
     &.btn-primary,
     &.btn-secondary {
+        box-shadow: $btn-box-shadow;
         text-transform: uppercase;
+        border: none;
         @include media-breakpoint-down(md) {
             margin: 0.5rem 0;
         }
@@ -12,7 +14,14 @@
 
 // ticker button
 .button__two-tone {
-    padding: $spacer;
+    width: calc(100% + 20px * 2);
+    padding: 10px 20px;
+    margin: 0 0 30px -20px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
     .button__two-tone-lead {
         background-color: rgba(#000032, 0.35);
         text-transform: uppercase;
@@ -25,6 +34,6 @@
     }
     .button__two-tone-lead,
     .button__two-tone-text {
-        padding: ($spacer / 2) $spacer;
+        padding: 8px $spacer;
     }
 }
