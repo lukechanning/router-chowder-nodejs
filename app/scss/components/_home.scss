@@ -1,0 +1,15 @@
+body.home {
+    
+    // navbar
+    .navbar {
+        background-color: transparent !important;
+    }
+    
+    // stripes
+    #stripes {
+        @include media-breakpoint-up(md) {
+            background: url(/assets/icon-grid.png), linear-gradient(150deg, $brand-primary 15%, $brand-success 70%, darken($brand-primary,5) 94%);
+            background-size: cover;
+        }
+    }
+}

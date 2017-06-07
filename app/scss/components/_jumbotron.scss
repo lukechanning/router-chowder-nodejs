@@ -2,8 +2,11 @@
 .jumbotron {
     color: $white;
     padding: 10vh 3rem;
-    background-image: url(/assets/icon-grid.png);
-    background-size: cover;
+    background-color: transparent;
+    @include media-breakpoint-down(sm) {
+        background-image: url(/assets/icon-grid.png);
+        background-size: cover;
+    }
     
     // text specific styling
     h4 {
