@@ -16,8 +16,10 @@ primary stylesheet for Bitfoot - caught you looking at our code!
 // load global styles
 @import 'global/buttons';
 @import 'global/stripes';
+@import 'global/typography';
 
 // load components
-@import 'components/home';
+@import 'components/home/home';
+@import 'components/home/home-features';
 @import 'components/jumbotron';
 @import 'components/navbar';

@@ -99,15 +99,15 @@ $orange: #f0ad4e !default;
 $yellow: #ffd500 !default;
 $green:  #5cb85c !default;
 $blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
+$teal:   #009688;
 $pink:   #ff5b77 !default;
-$purple: #613d7c !default;
+$purple: #673AB7;
 
 // Create grayscale
-$gray-dark:                 #292b2c !default;
+$gray-dark:                 #4A4A4A;
 $gray:                      #464a4c !default;
-$gray-light:                #636c72 !default;
-$gray-lighter:              #eceeef !default;
+$gray-light:                #78909C;
+$gray-lighter:              lighten($gray-light, 10);
 $gray-lightest:             #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
@@ -309,7 +309,7 @@ $kbd-box-shadow:         inset 0 -.1rem 0 rgba($black,.25) !default;
 $nested-kbd-font-weight: $font-weight-bold !default;
 
 $list-inline-padding: 5px !default;
-
+$letter-spacing: 1.05px;
 
 // Components
 //

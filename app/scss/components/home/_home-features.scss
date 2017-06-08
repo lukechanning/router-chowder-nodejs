@@ -1,0 +1,42 @@
+.home__features {
+    // typography 
+    p {
+        color: $gray-dark;
+        line-height: 25px;
+    }
+    // style the icons
+    &-icons {
+        width: $spacer * 4;
+        height: $spacer * 4;
+        border-radius: $spacer * 2;
+        margin: 0 auto;
+        background: $gray-light;
+        @include media-breakpoint-up(sm) {
+            margin-top: -5rem;
+        }
+        .fa {
+            color: $white;
+            display: none;
+            top: 0.5rem;
+            position: relative;
+        }
+        :first-child {
+            display: block;
+        }
+    }
+    // block styling
+    .text-left,
+    .text-right {
+        border-color: $gray-light;
+        padding-top: $spacer * 5;
+        padding-bottom: $spacer * 5;
+    }
+    .text-right {
+        padding-right: $spacer *4;
+        border-right: 3px solid;
+    }
+    .text-left {
+        padding-left: $spacer *4;
+        border-left: 3px solid;
+    }
+}
