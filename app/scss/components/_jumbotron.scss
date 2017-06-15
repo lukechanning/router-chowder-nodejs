@@ -25,6 +25,7 @@
         
         &-numbers {
             text-align: right;
+            border-right: 1px solid rgba(25,25,25,0.05);
             background: lighten($brand-primary, 5);
             > span {
                 text-shadow: 0 1px 1px rgba(25,25,25,0.25);
