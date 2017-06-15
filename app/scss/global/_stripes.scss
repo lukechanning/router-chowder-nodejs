@@ -1,11 +1,11 @@
-#stripes {
+#blocks {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
     transform: skewY(-5deg);
     transform-origin: 0;
-    background: linear-gradient(150deg, $brand-primary 15%, $brand-success 70%, darken($brand-primary,5) 94%);
+    background: linear-gradient(150deg, $brand-primary, $brand-primary 10%, darken($brand-primary,5) 94%);
   span {
     position: absolute;
     height: 40px;

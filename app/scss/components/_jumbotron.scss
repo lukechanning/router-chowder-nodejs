@@ -4,8 +4,37 @@
     padding: 10vh 3rem;
     background-color: transparent;
     @include media-breakpoint-down(sm) {
-        background-image: url(/assets/icon-grid.png);
         background-size: cover;
+    }
+    
+    // code block styling
+    &__code {
+        background: $white;
+        margin: $spacer 0;
+        color: darken($brand-primary, 15);
+        box-shadow: 0 2px 4px rgba(50, 50, 93, .1);
+        font-family: $font-family-monospace;
+        font-size: $spacer * 0.75;
+        
+        &-numbers>span,
+        &-lines>span {
+            display: block;
+            float: left;
+            width: 100%;
+        }
+        
+        &-numbers {
+            text-align: right;
+            background: lighten($brand-primary, 5);
+            > span {
+                text-shadow: 0 1px 1px rgba(25,25,25,0.25);
+            }
+        }
+        
+        &-numbers,
+        &-lines {
+            padding: ($spacer * 1.5) $spacer;
+        }
     }
     
     // text specific styling
@@ -13,19 +42,18 @@
         padding: $spacer 0;
     }
     i {
-        color: #005950;
+        color: $white;
         padding-right: 5px;
         font-weight: 700;
     }
     p {
         color: $white;
-        padding: $spacer 0;    
+        padding: $spacer 0;
     }
     // image styling
     img {
         max-width: 100%;
     }
-    
     // buttons 
     &__buttons {
         padding: $spacer 0;

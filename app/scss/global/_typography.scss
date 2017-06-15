@@ -11,3 +11,10 @@
 p {
     letter-spacing: $letter-spacing;
 }
+
+pre {
+    display: flex !important;
+    margin: 0 !important;
+    height: auto !important;
+    line-height: 18px;
+}
