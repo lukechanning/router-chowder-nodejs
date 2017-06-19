@@ -1,3 +1,14 @@
+.angled:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 180%;
+  top: 0;
+  transform: skewY(-12deg);
+  background: #f6f9fc;
+}
+
 #blocks {
     position: absolute;
     width: 100%;
@@ -31,7 +42,7 @@
 }
 
 @media (min-width: 670px) {
-  #stripes {
+  #blocks {
     span {
       height: 150px;
     }
@@ -54,7 +65,7 @@
 }
 
 @media (min-width: 880px) {
-  #stripes {
+  #blocks {
     span {
       height: 190px;
     }

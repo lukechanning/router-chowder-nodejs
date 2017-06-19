@@ -11,6 +11,7 @@
     <!--Load Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Source+Code+Pro:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="/app.css">
 </head>
 
@@ -101,7 +102,7 @@
                                 <span class="jumbotron__code-number">17</span>
                             </div>
                             <div class="jumbotron__code-lines col-11">
-<pre>
+                                <pre>
 <code>// welcome to router chowder
 var routerchowder = require('awesome');
 routerchowder.config( function($stateProvider, $locationProvider) {
@@ -131,30 +132,43 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     <!--END Jumbotron-->
 
     <!--START features section-->
-    <div class="home__features container">
-        <!--<div class="home__features-icons text-center hide-sm-down">-->
-        <!--    <i class="fa fa-3x fa-chevron-down" aria-hidden="true"></i>-->
-        <!--    <i class="fa fa-3x fa-rocket" aria-hidden="true"></i>-->
-        <!--    <i class="fa fa-3x fa-server" aria-hidden="true"></i>-->
-        <!--</div>-->
+    <div class="home__work container">
         <div class="row">
-            <div class="home__features-block text-right col">
-                <h3 class="teal font-weight-bold">Performance in the<br>Simplest Terms</h3>
+            <div class="home__work-block home__work-block-top text-right col">
+                <h3 class="teal font-weight-bold">Tracking Progress<br>at a Halfway Home</h3>
                 <p>Bitfoot makes it incredibly easy to <strong>deploy your sites and applications</strong> to the Web. We take care of creating a full <strong>cloud environment for your software.</strong> We scale your code to match performance, and we even
                     provide tech support in real-time, solving headaches as they happen.</p>
                 <hr>
-                <a href="#" class="text-link teal font-weight-bold"><big>See the Bitfoot Stack <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></big></a>
+                <div class="home__work-devicons gray">
+                    <i class="devicon-angularjs-plain"></i> <i class="devicon-laravel-plain"></i> <i class="devicon-nodejs-plain"></i> <i class="devicon-foundation-plain"></i>
+                    <br>
+                </div>
+                <a href="#" class="text-link teal font-weight-bold">
+                    <big>
+                        See the Project <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+                    </big>
+                </a>
             </div>
-            <div class="home__features-block text-left col hide-sm-down"></div>
+            <div class="home__work-block text-left home__work-block-top col hide-sm-down">
+                <img class="faded" src="/assets/cof-graphic.png" />
+            </div>
         </div>
         <div class="row">
-            <div class="home__features-block text-right col hide-sm-down"></div>
-            <div class="home__features-block text-left col">
-                <h3 class="purple font-weight-bold">Get your Code<br>Out of the Woods</h3>
+            <div class="home__work-block home__work-block-bottom text-right col hide-sm-down">
+                <img class="faded" src="/assets/aircheck-graphic.png" />
+            </div>
+            <div class="home__work-block text-left col">
+                <h3 class="purple font-weight-bold">Putting Home Reports<br> Back in the Home</h3>
                 <p>We do this because we get it — network administration is hard. And not every team has the time or budget for in-house solutions. That’s why our <strong>unique system of fully-managed hosting</strong> removes variables completely. All you
                     see is <strong>pitch-perfect code</strong> in a live environment.</p>
+                <div class="home__work-devicons gray">
+                    <br>
+                    <i class="devicon-express-original"></i> <i class="devicon-angularjs-plain"></i> <i class="devicon-laravel-plain"></i> <i class="devicon-nodejs-plain"></i> <i class="devicon-bootstrap-plain"></i>
+
+                    <br>
+                </div>
                 <hr>
-                <a href="#" class="text-link font-weight-bold purple"><big>Learn More About the Squatch <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></big></a>
+                <a href="#" class="text-link font-weight-bold purple"><big>see the project <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></big></a>
             </div>
         </div>
     </div>
@@ -166,6 +180,7 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="app.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>

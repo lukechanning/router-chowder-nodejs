@@ -1,4 +1,4 @@
-.home__features {
+.home__work {
     // typography 
     p {
         color: $gray-dark;
@@ -27,16 +27,23 @@
     // block styling
     .text-left,
     .text-right {
-        border-color: $gray-light;
         padding-top: $spacer * 5;
         padding-bottom: $spacer * 5;
+        img {
+            width: 100%;
+            opacity: 0.0;
+        }
     }
     .text-right {
         padding-right: $spacer *4;
-        border-right: 3px solid;
     }
     .text-left {
         padding-left: $spacer *4;
-        border-left: 3px solid;
+    }
+    &-block-top {
+        padding-top: $spacer * 10 !important;
+    }
+    &-block-bottom {
+        padding-bottom: $spacer * 10 !important;
     }
 }

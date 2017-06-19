@@ -16,11 +16,11 @@ primary stylesheet for Router Chowder home site - caught you looking at our code
 // load global styles
 @import 'global/buttons';
 @import 'global/hljs';
-@import 'global/stripes';
+@import 'global/angles';
 @import 'global/typography';
 
 // load components
 @import 'components/home/home';
-@import 'components/home/home-features';
+@import 'components/home/home-work';
 @import 'components/jumbotron';
 @import 'components/navbar';
