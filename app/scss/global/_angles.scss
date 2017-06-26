@@ -5,11 +5,12 @@
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 150px;
+    top: -4rem;
     left: 0;
     transform: skewY(-5deg);
-    background: #f6f9fc;
+    background: $gray-lighter;
+    transition: background 1s ease;
   }
 }
 

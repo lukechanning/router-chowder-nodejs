@@ -1,6 +1,27 @@
 .home__staff {
+    transition: background 1s ease;
+    background: $gray-lighter;
+    border-bottom: 10px solid $gray-lighter;
+    &.night {
+        background-color: darken(#25254C, 10);
+        background-image: url('assets/stars.png');
+        background-size: cover;
+        border-bottom: 10px solid darken(#25254C, 10);
+        color: $white;
+        p, h2, h3, h4, a, i, {
+            color: $white;
+        }
+        &:before {
+            background-color: darken(#25254C, 10);
+        }
+        .home__staff-bio {
+            @include media-breakpoint-up(md) {
+                border-right: 2px solid rgba($white,7);
+            }
+        }
+    }
     &-header {
-        padding: 8vh 0;
+        padding: 5rem 0 2rem 0;
     }
     &-images {
         img {
@@ -24,21 +45,15 @@
     }
     &-bio {
         opacity: 0;
+        cursor: pointer;
+        &.hong-kong {
+            opacity: 1.0;
+        }
         @include media-breakpoint-up(md) {
-            border-right: 2px solid gray;
+            border-right: 2px solid $gray-light;
             padding-right: 2rem;
             padding-bottom: 26vh;
             margin-bottom: -34vh;
         }
-        // &:before {
-        //     content: "";
-        //     top: 2.3rem;
-        //     height: 200%;
-        //     position: absolute;
-        //     right: 0;
-        //     border-style: solid;
-        //     border-color: $gray-dark;
-        //     border-width: 2px;
-        // }
     }
 }
