@@ -32,10 +32,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#home__work">Our Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Work</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -62,7 +62,7 @@
                     </p>
                     <div class="row jumbotron__buttons">
                         <div class="col">
-                            <a href="#">
+                            <a href="#home__work">
                                 <button type="button" class="btn btn-block btn-primary">
                                 <i class="fa fa-code" aria-hidden="true"></i> See Our Work
                                 </button>
@@ -132,7 +132,7 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     <!--END Jumbotron-->
 
     <!--START features section-->
-    <div class="home__work container">
+    <div id="home__work" class="home__work container">
         <div class="row">
             <div class="home__work-block home__work-block-top text-right col">
                 <h3 class="teal font-weight-bold">Tracking Progress<br>at a Halfway Home</h3>
@@ -145,16 +145,16 @@ routerchowder.config( function($stateProvider, $locationProvider) {
                 </div>
                 <a href="#" class="text-link teal font-weight-bold">
                     <big>
-                        See the Project <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    </big>
+                            See the Project <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+                        </big>
                 </a>
             </div>
-            <div class="home__work-block text-left home__work-block-top col hide-sm-down">
+            <div class="home__work-block text-left home__work-block-top col hidden-sm-down">
                 <img class="faded" src="/assets/cof-graphic.png" />
             </div>
         </div>
         <div class="row">
-            <div class="home__work-block home__work-block-bottom text-right col hide-sm-down">
+            <div class="home__work-block home__work-block-bottom text-right col hidden-sm-down">
                 <img class="faded" src="/assets/aircheck-graphic.png" />
             </div>
             <div class="home__work-block text-left col">
@@ -169,6 +169,87 @@ routerchowder.config( function($stateProvider, $locationProvider) {
                 </div>
                 <hr>
                 <a href="#" class="text-link font-weight-bold purple"><big>see the project <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></big></a>
+            </div>
+        </div>
+    </div>
+    <div class="home__staff text-center angled container-fluid">
+        <div class="row justify-content-center home__staff-header">
+            <div class="col-8">
+                <h3 class="orange font-weight-bold">More Than an Eyeball Logo.</h3>
+                <p class="text-justify">Router Chowder is a small, diverse team of highly effective tech professionals. That's start-up for, "We're a cool group of folks that make awesome stuff". We develop high-quality, API-driven web applications for a wide range of clients.
+                    From small two-person start-ups to large ventures for nationally recognized companies. But mostly, we just try to make our parents proud</p>
+                <hr>
+                <a href="#" class="text-link font-weight-bold orange"><big>Start working with us <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></big></a>
+            </div>
+        </div>
+        <div class="home__staff-bios d-flex no-gutters align-items-end">
+            <div class="3 text-right">
+                <div class="home__staff-bio hong-kong" data-city="hong-kong">
+                    <h4>Nic Chan</h4>
+                    <p><small>
+                    <strong>Senior Developer</strong><br>
+                    <em>Hong Kong</em><br>
+                    Nic is a front-end wizard, crafting unparalleled SCSS and JavaScript. She is Router Chowder's "Batman" -- when it needs to be kicked, she's there with a boot. She lives in Hong Kong with her family and <a href="https://www.instagram.com/duchessmoopie/">cat</a>.</small></p>
+                </div>
+            </div>
+            <div class="3 text-right">
+                <div class="home__staff-bio san-fran" data-city="san-fran">
+                    <h4>Luke Evans</h4>
+                    <p>
+                        <small>
+                    <strong>Junior Developer</strong><br>
+                    <em>San Francisco</em><br>
+                    Luke used to work at a nuclear research facility writing Python. They wouldn't give him any spidey powers, though. So now he works with Router Chowder creating JavaScript and PHP applications. He lives in San Francisco with his fiancee. 
+                    </small>
+                    </p>
+                </div>
+            </div>
+            <div class="3 text-right">
+                <div class="home__staff-bio boulder" data-city="boulder">
+                    <h4>Luke Patrick</h4>
+                    <p>
+                        <small>
+                    <strong>Owner / Lead Developer</strong><br>
+                    <em>Boulder</em><br>
+                    Luke started Router Chowder back in 2015 as a blog. Then the project gained sentience and became a web application development studio. He brews coffee, APIs and beer. He lives in Boulder with his partner and two cats. 
+                    </small>
+                    </p>
+                </div>
+            </div>
+            <div class="3 text-right">
+                <div class="home__staff-bio little-rock" data-city="little-rock">
+
+                    <h4>Holly Sanson &<br> Allen Winkler</h4>
+                    <p>
+                        <small>
+                                <strong>Marketing Lead</strong><br>
+                                <em>Little Rock</em><br>
+                                Holly has been with Router Chowder before it even had a name. She whips SEO into shape and orchestrates marketing campaigns with like a boss. She lives in the Little Rock metro with her family and two dogs. 
+                                </small>
+                    </p>
+                    <!--<br>-->
+                    <!--<p>-->
+                    <!--    <small>-->
+                    <!--            <strong>Sales Director</strong><br>-->
+                    <!--            <em>Little Rock</em><br>-->
+                    <!--            Allen is the definitino of "always be closing." He handles acquisitions and sales for the company when he's not becoming the HGTV staple of Central Arkansas. He also lives in the Little Rock metro with his wife and dog. -->
+                    <!--            </small>-->
+                    <!--</p>-->
+                </div>
+            </div>
+        </div>
+        <div class="home__staff-images d-flex no-gutters">
+            <div class="3" data-city="hong-kong">
+                <img src="assets/hong-kong.png">
+            </div>
+            <div class="3" data-city="san-fran">
+                <img src="assets/san-fran.png">
+            </div>
+            <div class="3" data-city="boulder">
+                <img src="assets/boulder.png">
+            </div>
+            <div class="3" data-city="little-rock">
+                <img src="assets/little-rock.png">
             </div>
         </div>
     </div>

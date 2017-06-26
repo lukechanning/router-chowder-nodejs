@@ -1,0 +1,44 @@
+.home__staff {
+    &-header {
+        padding: 8vh 0;
+    }
+    &-images {
+        img {
+            width: 100%;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+    // bio styling
+    &-bios {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        p {
+            font-size: 13px;
+        }
+        .text-right {
+            padding-right: 2rem;
+            padding: 2rem;
+        }
+    }
+    &-bio {
+        opacity: 0;
+        @include media-breakpoint-up(md) {
+            border-right: 2px solid gray;
+            padding-right: 2rem;
+            padding-bottom: 26vh;
+            margin-bottom: -34vh;
+        }
+        // &:before {
+        //     content: "";
+        //     top: 2.3rem;
+        //     height: 200%;
+        //     position: absolute;
+        //     right: 0;
+        //     border-style: solid;
+        //     border-color: $gray-dark;
+        //     border-width: 2px;
+        // }
+    }
+}
