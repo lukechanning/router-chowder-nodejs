@@ -22,7 +22,7 @@ $(document).ready(function() {
     //on hover, show bio for cities
     $('.home__staff-images > div').mouseover(function(){
         var attribute = $(this).attr("data-city");
-        $( ".home__staff-bio" ).fadeTo(80,0);
+        $( ".home__staff-bio" ).not("." + attribute).css('opacity',0);
         $("." + attribute).fadeTo(80,1);
     });
     
