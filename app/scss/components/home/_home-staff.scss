@@ -1,22 +1,31 @@
 .home__staff {
-    transition: background 1s ease;
+    transition: background 1s ease, background-image 1s ease-in-out;
     background: $gray-lighter;
+    margin-top: 5rem;
     border-bottom: 10px solid $gray-lighter;
     &.night {
-        background-color: darken(#25254C, 10);
-        background-image: url('assets/stars.png');
+        background-color: #010F20;
+        background: -moz-linear-gradient(top, #010f20 38%, #000914 100%);
+        background: -webkit-linear-gradient(top, #010f20 38%, #000914 100%);
+        background: linear-gradient(to bottom, #010f20 38%, #000914 100%);
         background-size: cover;
         border-bottom: 10px solid darken(#25254C, 10);
         color: $white;
-        p, h2, h3, h4, a, i, {
+        p,
+        h2,
+        h3,
+        h4,
+        a,
+        i,
+        {
             color: $white;
         }
         &:before {
-            background-color: darken(#25254C, 10);
+            background-color: #010F20;
         }
         .home__staff-bio {
             @include media-breakpoint-up(md) {
-                border-right: 2px solid rgba($white,7);
+                border-right: 2px solid rgba($white, 7);
             }
         }
     }
@@ -44,11 +53,6 @@
         }
     }
     &-bio {
-        opacity: 0;
-        cursor: pointer;
-        &.hong-kong {
-            opacity: 1.0;
-        }
         @include media-breakpoint-up(md) {
             border-right: 2px solid $gray-light;
             padding-right: 2rem;

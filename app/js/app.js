@@ -7,45 +7,23 @@
 
 $(document).ready(function() {
 
-    // fire the scroll into view function
-    $(window).on("scroll resize", function() {
-        $(".faded").each(function(index, element) {
-            if (isScrolledIntoView(element)) {
-                $(element).animate({
-                    opacity: 1.0
-                }, 500);
-            }
-        });
-    });
-
     //on hover, show bio for cities
-    $('.home__staff-images > div').mouseover(function() {
-        var attribute = $(this).attr("data-city");
-        $(".home__staff-bio").not("." + attribute).css('opacity', 0);
-        $("." + attribute).fadeTo(80, 1);
-    });
+    // $('.home__staff-images > div').mouseover(function() {
+    //     var attribute = $(this).attr("data-city");
+    //     $(".home__staff-bio").not("." + attribute).css('opacity', 0);
+    //     $("." + attribute).fadeTo(80, 1);
+    // });
 
-    $('.home__staff').scrollie({
-        direction: 'both',
-        scrollOffset : -500,
-        scrollRatio: 2,
-        scrollingToTheTop: function(elem) {
-            $(elem).addClass('night');
-        }
-    });
+    // $('.home__staff').scrollie({
+    //     direction: 'both',
+    //     scrollOffset : -600,
+    //     scrollRatio: 2,
+    //     scrollingToTheTop: function(elem) {
+    //         $(elem).addClass('night');
+    //     }
+    // });
 
 });
-
-function isScrolledIntoView(elem) {
-    var centerY = Math.max(0, (($(window).height() - $(elem).outerHeight()) - 50) +
-        $(window).scrollTop());
-
-    var elementTop = $(elem).offset().top;
-    var elementBottom = elementTop + $(elem).height();
-
-    return elementTop <= centerY && elementBottom >= centerY;
-}
-
 
 /****
  * jQuery Scrollie Plugin v1.0.1
