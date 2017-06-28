@@ -249,6 +249,34 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     </div>
     <!--END HOME STAFF-->
 
+    <!--START CONTACT SECTION-->
+    <div class="home__contact container">
+        <h3>Work With Us</h3>
+        <hr>
+        <p v-bind:class="{ 'visible': sent, 'hidden': unsent }">Thanks for getting in touch! We'll email you back as quickly as we can</p>
+        <form v-bind:class="{ 'visible': unsent, 'hidden': sent }" class="form-inline" id="contact__form" v-on:submit.prevent="submitForm" action="">
+            <div class="form-group col-xs-12 col-sm-12 col-md-3">
+                <input type="text" v-model="name" v-on:blur="isValidName" required="" class="form-control" name="name" id="name" placeholder="Martha Jones">
+            </div>
+            <div class="form-group col-xs-12 col-sm-12 col-md-3">
+                <input type="email" required="" email="" v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" id="email" placeholder="Email Address">
+            </div>
+            <div class="form-group col-xs-12 col-sm-12 col-md-3">
+                <select v-model="select" class="custom-select">
+                  <option selected>I have . . . </option>
+                  <option value="Project Needs">Project Needs</option>
+                  <option value="General Questions">General Questions</option>
+                  <option value="Overflow Work">Overflow Work</option>
+                  <option value="Hair-Do Questions">70's Hair-Do Questions</option>
+                </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-12 col-md-3">
+                <button class="btn btn-block btn-secondary btn-arrow" id="join-beta-button"> Contact Us </button>
+            </div>
+        </form>
+    </div>
+    <!--END CONTACT SECTION-->
+
     <!--START FOOTER SECTION-->
     <div class="footer container-fluid">
         <div class="container">
@@ -310,6 +338,10 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <!-- Vue.js plugin: Resource, gives ajax functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
     <script src="app.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
