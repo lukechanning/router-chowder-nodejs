@@ -20,6 +20,7 @@ primary stylesheet for Router Chowder home site - caught you looking at our code
 @import 'global/typography';
 
 // load components
+@import 'components/fake-browser';
 @import 'components/footer';
 @import 'components/home/home';
 @import 'components/home/home-contact';

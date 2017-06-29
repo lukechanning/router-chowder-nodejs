@@ -251,30 +251,49 @@ routerchowder.config( function($stateProvider, $locationProvider) {
 
     <!--START CONTACT SECTION-->
     <div id="home__contact" class="home__contact text-center container">
-        <div class="home__contact-header">
-            <h3>Work With Us</h3>
-            <hr>
+        <div class="row justify-content-center">
+            <!--BEGIN CONTACT HEADER-->
+            <div class="home__contact-header col-8">
+                <h3>Work With Us</h3>
+                <hr>
+                <p>We'd love to hear from you! Whether you've got web development needs, overflow work that needs professional help, or just questions about us as a company -- we're happy to help. Drop us a line below and we'll get back with you as quickly
+                    as we can.</p>
+            </div>
         </div>
-        <form class="form-inline" id="contact__form" v-on:submit.prevent="submitForm" action="">
-            <div class="form-group col-xs-12 col-sm-12 col-md-3">
-                <input type="text" v-model="name" v-on:blur="isValidName" required="" class="form-control" name="name" id="name" placeholder="Martha Jones">
-            </div>
-            <div class="form-group col-xs-12 col-sm-12 col-md-3">
-                <input required type="email" required="" email="" v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" id="email" placeholder="Email Address">
-            </div>
-            <div required class="form-group col-xs-12 col-sm-12 col-md-3">
-                <select v-model="select" class="custom-select">
+        <div class="row justify-content-center">
+            <div class="fake-browser-ui col-10">
+                <div class="frame">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="home__contact-fake-window">
+                    <!--BEGIN FORM-->
+                    <form id="contact__form" v-on:submit.prevent="submitForm" action="">
+                        <div class="form-group">
+                            <input type="text" v-model="name" v-on:blur="isValidName" required="" class="form-control" name="name" id="name" placeholder="Martha Jones">
+                        </div>
+                        <div class="form-group">
+                            <input required type="email" required="" email="" v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" id="email" placeholder="Email Address">
+                        </div>
+                        <div required class="form-group">
+                            <select v-model="select" class="custom-select">
                   <option selected>I have . . . </option>
                   <option value="Project Needs">Project Needs</option>
                   <option value="General Questions">General Questions</option>
                   <option value="Overflow Work">Overflow Work</option>
                   <option value="Hair-Do Questions">70's Hair-Do Questions</option>
                 </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-secondary btn-arrow" id="join-beta-button">{{ button }}</button>
+                        </div>
+                    </form>
+                    <!--END FORM-->
+                </div>
             </div>
-            <div class="form-group col-xs-12 col-sm-12 col-md-3">
-                <button class="btn btn-block btn-secondary btn-arrow" id="join-beta-button">{{ button }}</button>
-            </div>
-        </form>
+        </div>
+
     </div>
     <!--END CONTACT SECTION-->
 

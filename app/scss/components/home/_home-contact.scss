@@ -5,11 +5,25 @@
         margin-bottom: 3rem;
     }
     // input styling
-    input, select {
+    input,
+    select {
         transition: all 0.5s ease;
-     &:focus {
-        border-color: lighten($purple,10);
-        box-shadow: 0 1px 3px rgba($purple,10);
-     }
+        &:focus {
+            border-color: lighten($purple, 10);
+            box-shadow: 0 1px 3px rgba($purple, 10);
+        }
+    }
+    input,
+    select,
+    input[type=submit] {
+        width: 100%;
+    }
+    // fake browser stuff
+    .fake-browser-ui {
+        margin-bottom: -5rem;
+    }
+    &-fake-window {
+        padding: 3rem 3rem 5rem 3rem;
+        background: $white;
     }
 }
