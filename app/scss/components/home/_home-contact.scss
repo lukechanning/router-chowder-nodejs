@@ -19,11 +19,10 @@
         width: 100%;
     }
     // fake browser stuff
-    .fake-browser-ui {
+    .fake-browser {
         margin-bottom: -5rem;
     }
-    &-fake-window {
+    .fake-browser-container {
         padding: 3rem 3rem 5rem 3rem;
-        background: $white;
     }
 }

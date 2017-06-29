@@ -261,13 +261,29 @@ routerchowder.config( function($stateProvider, $locationProvider) {
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="fake-browser-ui col-10">
-                <div class="frame">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="fake-browser col-10">
+                <div class="fake-browser-bar">
+                    <div class="buttons">
+                        <span class="bt-1"></span>
+                        <span class="bt-2"></span>
+                        <span class="bt-3"></span>
+                    </div>
+                    <div class="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="address-bar">
+                        <div class="repeat">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </div>
+                        <div class="address-bar-text">
+                            https://flavortown.us
+                        </div>
+                    </div>
                 </div>
-                <div class="home__contact-fake-window">
+
+                <div class="fake-browser-container">
                     <!--BEGIN FORM-->
                     <form id="contact__form" v-on:submit.prevent="submitForm" action="">
                         <div class="form-group">
