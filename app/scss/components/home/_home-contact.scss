@@ -1,0 +1,15 @@
+.home__contact {
+    padding: 5rem 0;
+    color: $gray-light;
+    &-header {
+        margin-bottom: 3rem;
+    }
+    // input styling
+    input, select {
+        transition: all 0.5s ease;
+     &:focus {
+        border-color: lighten($purple,10);
+        box-shadow: 0 1px 3px rgba($purple,10);
+     }
+    }
+}

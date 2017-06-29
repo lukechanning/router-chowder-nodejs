@@ -38,7 +38,7 @@
                         <a class="nav-link" href="#home__staff">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#home__contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -174,7 +174,7 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     </div>
 
     <!--BEGIN HOME STAFF-->
-    <div class="home__staff text-center angled container-fluid night">
+    <div id="home__staff" class="home__staff text-center angled container-fluid night">
         <div class="row justify-content-center home__staff-header">
             <div class="col-8">
                 <h3 class="orange font-weight-bold">More Than an Eyeball Logo.</h3>
@@ -250,18 +250,19 @@ routerchowder.config( function($stateProvider, $locationProvider) {
     <!--END HOME STAFF-->
 
     <!--START CONTACT SECTION-->
-    <div class="home__contact container">
-        <h3>Work With Us</h3>
-        <hr>
-        <p v-bind:class="{ 'visible': sent, 'hidden': unsent }">Thanks for getting in touch! We'll email you back as quickly as we can</p>
-        <form v-bind:class="{ 'visible': unsent, 'hidden': sent }" class="form-inline" id="contact__form" v-on:submit.prevent="submitForm" action="">
+    <div id="home__contact" class="home__contact text-center container">
+        <div class="home__contact-header">
+            <h3>Work With Us</h3>
+            <hr>
+        </div>
+        <form class="form-inline" id="contact__form" v-on:submit.prevent="submitForm" action="">
             <div class="form-group col-xs-12 col-sm-12 col-md-3">
                 <input type="text" v-model="name" v-on:blur="isValidName" required="" class="form-control" name="name" id="name" placeholder="Martha Jones">
             </div>
             <div class="form-group col-xs-12 col-sm-12 col-md-3">
-                <input type="email" required="" email="" v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" id="email" placeholder="Email Address">
+                <input required type="email" required="" email="" v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" id="email" placeholder="Email Address">
             </div>
-            <div class="form-group col-xs-12 col-sm-12 col-md-3">
+            <div required class="form-group col-xs-12 col-sm-12 col-md-3">
                 <select v-model="select" class="custom-select">
                   <option selected>I have . . . </option>
                   <option value="Project Needs">Project Needs</option>
@@ -271,7 +272,7 @@ routerchowder.config( function($stateProvider, $locationProvider) {
                 </select>
             </div>
             <div class="form-group col-xs-12 col-sm-12 col-md-3">
-                <button class="btn btn-block btn-secondary btn-arrow" id="join-beta-button"> Contact Us </button>
+                <button class="btn btn-block btn-secondary btn-arrow" id="join-beta-button">{{ button }}</button>
             </div>
         </form>
     </div>
@@ -301,24 +302,24 @@ routerchowder.config( function($stateProvider, $locationProvider) {
                             </ul>
                         </div>
                         <div class="col text-left">
-                            <h4>Smoke Bomb</h4>
+                            <h4>Our Network</h4>
                             <ul>
                                 <div class="footer__link">
-                                    <a href="#home__work">Our Work</a>
+                                    <a href="https://blog.routerchowder.com">The Blog</a>
                                 </div>
                                 <div class="footer__link">
-                                    <a href="#home__staff">About Us</a>
+                                    <a href="#">Pixel Chowder</a>
                                 </div>
                                 <div class="footer__link">
-                                    <a href="#home__contact">Contact Us</a>
+                                    <a href="https://bitfoot.io">Bitfoot.io</a>
                                 </div>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-2 footer__social-links text-center">
-                    <i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+                    <a href="https://www.facebook.com/routerchowder/"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/chowdermonsters"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
                     <i class="fa fa-2x fa-dribbble" aria-hidden="true"></i>
                 </div>
             </div>

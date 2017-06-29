@@ -12,8 +12,7 @@ new Vue({
         name: '', // data for the name on the form
         email: '', // data for the email on the form
         select: '', // data for the select on the form
-        sent: false,
-        unsent: true
+        button: 'Contact Us'
     },
     methods: { // all the actions our app can do
         isValidName: function() { // TODO what if name is just spaces?
@@ -27,7 +26,7 @@ new Vue({
             return valid;
         },
         submitForm: function() {
-            
+            this.button = "Thanks!";
             this.$http.post('/email', {
                 name: this.name,
                 email: this.email,
@@ -36,5 +35,10 @@ new Vue({
 
         }
     }
+});
+
+// jquery stuff
+$(document).ready(function(){
+   $("a[href^=#]").click(function(e) { e.preventDefault(); var dest = $(this).attr('href'); console.log(dest); $('html,body').animate({ scrollTop: $(dest).offset().top }, 'slow'); }); 
 });
 },{}]},{},[1]);
