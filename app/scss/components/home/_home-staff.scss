@@ -3,6 +3,12 @@
     background: $gray-lighter;
     margin-top: 5rem;
     border-bottom: 10px solid $gray-lighter;
+    // quick extra small fix
+    .d-flex {
+        @include media-breakpoint-down(sm) {
+            flex-direction: column !important;
+        }
+    }
     &.night {
         background-color: #010F20;
         background: linear-gradient(lighten($purple-dark, 15), $purple-dark 94%);
@@ -36,6 +42,13 @@
             width: 100%;
             @include media-breakpoint-down(sm) {
                 display: none;
+            }
+        }
+    }
+    .san-fran {
+        img {
+            @include media-breakpoint-down(sm) {
+                display: block;
             }
         }
     }

@@ -23,6 +23,9 @@
   transform-origin: 0;
   background: linear-gradient(150deg, $brand-primary, $brand-primary 10%, darken($brand-primary, 5) 94%);
   @include media-breakpoint-down(sm) {
+    height: 100%;
+  }
+  @include media-breakpoint-down(xs) {
     height: 125%;
   }
   span {
