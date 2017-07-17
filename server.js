@@ -30,7 +30,7 @@ server.post('/email', function(req, res) {
     var content = new helper.Content('text/plain', req.body.name + ' is interested in ' + req.body.select);
     var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
-    var sg = require('sendgrid')('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');
+    var sg = require('sendgrid')(process.env.SENDGRID);
     var request = sg.emptyRequest({
         method: 'POST',
         path: '/v3/mail/send',
