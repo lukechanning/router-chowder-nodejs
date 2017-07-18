@@ -40,9 +40,7 @@ gulp.task('buildSass', function(){
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(cleanCSS({
-      compatibility: 'ie8'
-    }))
+    .pipe(cleanCSS({debug:true}))
     .pipe(gulp.dest(sassOutput));
 });
 
@@ -59,7 +57,8 @@ gulp.task('browserify', function() {
 gulp.task('buildJS', function() {
     return gulp
     .src('./public/app.js')
-    .pipe(uglify());
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/')); // shove it in the js hole
 });
 
 // define the watch task
@@ -72,4 +71,4 @@ gulp.task('watch', function() {
 gulp.task('default', ['sass', 'browserify', 'watch' /*, possible other tasks... */]);
 
 // setup our deploy task
-gulp.task('build', ['sass', 'buildSass', 'browserify', 'buildJS' /* other deploy tasks */]);
+gulp.task('build', ['browserify', 'buildJS', 'buildSass' /* other deploy tasks */]);
