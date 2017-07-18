@@ -20,7 +20,7 @@ var router = express.Router(); // get an instance of the express Router
 // set expiration headers on assets
 server.get('/*', function (req, res, next) {
 
-  if (req.url.indexOf("/images/") === 0 || req.url.indexOf("/stylesheets/") === 0) {
+  if (req.url.indexOf("/assets/") === 0 || req.url.indexOf("/icons/") === 0) {
     res.setHeader("Cache-Control", "public, max-age=2592000");
     res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
   }
