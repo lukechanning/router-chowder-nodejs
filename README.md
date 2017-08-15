@@ -9,4 +9,6 @@
 
 <!--------------------------------------------------------------------------------->
  
- Kick-ass from top to bottom
+ ### Kicking ass from top to bottom! 
+ 
+ This is the front-end code for the Router Chowder main site. We want to offer this code to you for your own consumption and pleasure. However, if you use any of the tools developed here, please make sure to let us know. We worked hard to develop it, and we'd love to hear it helped you out. 
